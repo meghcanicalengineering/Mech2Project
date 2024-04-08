@@ -1,7 +1,32 @@
-## Robot Package Template
+# DogLiDAR
+**Hardware**
+- A1M8 Slamtec LiDAR
+- Raspberry Pi 4 Model B
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+**Software**
+- Ubuntu 22.04 Jammy Jellyfish
+- ROS2 Humble Hawksbill
+- Rviz2
+- Gazebo(?)
+- slam_toolbox
+- rplidar
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+# Viewing LiDAR PointCloud in RViz
+1. Start the Pi, change time and date
+2. Open the terminal
+3. Change directory to ros2 workspace  
+    ```cd ~/ros2_ws/```
+4. Run bash source for starting ROS Humble  
+    ```source /opt/ros/humble/setup.bash```
+5. Run bash source for package environment setup  
+   ```source ./install/setup.bash```
+6. Change directory to RPLiDAR source file  
+    ```cd src/rplidar_ros/```
+7. Run sh source for udev rules  
+   ```source scripts/create_udev_rules.sh```
+8. Run RPLiDAR node and view in RViz (this is from a single command)  
+    ```ros2 launch rplidar_ros view_rplidar_a1_launch.py```
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+From here, the node will open and RViz will open, showing the PointCloud from the LiDAR data  
+Change delay to allow for changes in points to build for some time  
+Change size of points to visualize better
