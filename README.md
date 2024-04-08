@@ -16,15 +16,15 @@
 2. Open the terminal
 3. Change directory to ros2 workspace  
     ```cd ~/ros2_ws/```
-4. Run bash source for starting ROS Humble  
+4. Source ROS Humble  
     ```source /opt/ros/humble/setup.bash```
-5. Run bash source for package environment setup  
+5. Source package environment setup  
    ```source ./install/setup.bash```
 6. Change directory to RPLiDAR source file  
     ```cd src/rplidar_ros/```
-7. Run sh source for udev rules  
+7. Source udev rules  
    ```source scripts/create_udev_rules.sh```
-8. Run RPLiDAR node and view in RViz (this is from a single command)  
+8. Run RPLiDAR node and view in RViz (single command)  
     ```ros2 launch rplidar_ros view_rplidar_a1_launch.py```
 
 From here, the node will open and RViz will open, showing the PointCloud from the LiDAR data  
