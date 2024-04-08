@@ -1,4 +1,4 @@
-# Project Hardware/Software
+## Project Hardware/Software
 **Hardware**
 - A1M8 Slamtec LiDAR
 - Raspberry Pi 4 Model B
@@ -11,7 +11,7 @@
 - slam_toolbox
 - rplidar
 
-# Viewing LiDAR PointCloud in RViz
+## Viewing LiDAR PointCloud in RViz
 1. Start the Pi, change time and date
 2. Open the terminal
 3. Change directory to ros2 workspace  
