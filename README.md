@@ -1,4 +1,4 @@
-# DogLiDAR
+# Project Hardware/Software
 **Hardware**
 - A1M8 Slamtec LiDAR
 - Raspberry Pi 4 Model B
